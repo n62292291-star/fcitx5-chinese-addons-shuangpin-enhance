@@ -136,7 +136,7 @@ FCITX_CONFIGURATION(
                             true};
     Option<bool> partialFinal{this, "PartialFinal",
                               _("Match partial finals (e -> en, eng, ei)"),
-                              true};
+                              false};
     OptionWithAnnotation<bool, OptionalHideInDescription> partialSp{
         this, "PartialSp",
         _("Match partial shuangpin if input length is longer than 4"), false};
@@ -360,7 +360,7 @@ FCITX_CONFIGURATION(
             {.parent = this,
              .path = "QuickPhraseTriggerRegex",
              .description = _("Regular expression to trigger quick phrase"),
-             .defaultValue = {".(/|@)$", "^(www|bbs|forum|mail|bbs)\\.",
+             .defaultValue = {".(/|@)$", "^(www|bbs|forum|mail)\\.",
                               "^(http|https|ftp|telnet|mailto):"},
              .annotation = {_("Enter quickphrase mode when current input "
                               "matches any regular "
